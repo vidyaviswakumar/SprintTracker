@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="sprintDao" class="com.me.app.dao.SprintDAO"></bean>
+	<bean id="storyDao" class="com.me.app.dao.StoryDAO"></bean>
+	<bean id="roleDao" class="com.me.app.dao.RoleDAO"></bean>
+	<bean id="statusDao" class="com.me.app.dao.StatusDAO"></bean>
+	<bean id="userDao" class="com.me.app.dao.UserDAO"></bean>
+	<bean id="subtaskDao" class="com.me.app.dao.SubtaskDAO"></bean>
+	<bean id="userValidator" class="com.me.app.controller.UserValidator"></bean>
+	<bean id="storyValidator" class="com.me.app.controller.StoryValidator"></bean>
+	<bean id="subtaskValidator" class="com.me.app.controller.SubtaskValidator"></bean>
+		
+</beans>

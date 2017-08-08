@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/projectdb</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">admin</property>
+		
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.show_sql">true</property>
+
+		<mapping class="com.me.app.pojo.User" />	
+		<mapping class="com.me.app.pojo.Person" />
+		<mapping class="com.me.app.pojo.Story" />
+		<mapping class="com.me.app.pojo.Subtask" />
+		<mapping class="com.me.app.pojo.Sprint" />
+		<mapping class="com.me.app.pojo.Status" />
+		<mapping class="com.me.app.pojo.Role" />
+    </session-factory>
+</hibernate-configuration>

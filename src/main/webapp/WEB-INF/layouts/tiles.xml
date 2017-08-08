@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+  <definition name="home" template="/WEB-INF/layouts/tiles.jsp">
+    <put-attribute name="title" value="Welcome to Sprint Tracker" />
+    <put-attribute name="header" value="/WEB-INF/layouts/common/header.jsp" />
+    <put-attribute name="body" value="/WEB-INF/layouts/common/body.jsp" />
+    <put-attribute name="content" value="" />
+    <put-attribute name="footer" value="" />
+  </definition>
+  
+  <definition name="createSprint" extends="home" >   
+    <put-attribute name="content" value="/WEB-INF/layouts/scrum-master/content.jsp" />     
+  </definition>
+  
+   <definition name="newSprint" extends="home" >   
+    <put-attribute name="body" value="/WEB-INF/layouts/scrum-master/body.jsp" />     
+  </definition>
+ 
+   <definition name="authorize" extends="home" >   
+    <put-attribute name="content" value="/WEB-INF/layouts/admin/content.jsp" />        
+  </definition>
+  
+  
+  <definition name="listUsers" extends="home" >   
+    <put-attribute name="content" value="/WEB-INF/layouts/admin/body.jsp" />        
+  </definition>
+  
+   
+    <definition name="stories" extends="home" >   
+    <put-attribute name="body" value="/WEB-INF/layouts/story/body.jsp" />  
+    
+  </definition>
+  
+  <definition name="storiesScrum" extends="home" >   
+    <put-attribute name="body" value="/WEB-INF/layouts/story/body.jsp" />  
+    <put-attribute name="footer" value="/WEB-INF/layouts/story/story.jsp" /> 
+    <put-attribute name="content" value="/WEB-INF/layouts/scrum-master/pdf.jsp" /> 
+  </definition>
+  
+  <definition name="storyCreation" template="/WEB-INF/layouts/tiles.jsp" > 
+  <put-attribute name="title" value="Welcome to Sprint Tracker" />
+    <put-attribute name="header" value="" />   
+    <put-attribute name="content" value="" />  
+    <put-attribute name="body" value="/WEB-INF/layouts/story/createStory.jsp" /> 
+    <put-attribute name="footer" value="" />  
+  </definition>
+  
+      <definition name="subtasks" extends="home" >   
+    <put-attribute name="body" value="/WEB-INF/layouts/subtask/body.jsp" />   
+  </definition>
+  
+  <definition name="subtaskCreation" template="/WEB-INF/layouts/tiles.jsp" > 
+  <put-attribute name="title" value="Welcome to Sprint Tracker" />
+    <put-attribute name="header" value="" />   
+    <put-attribute name="content" value="" />  
+    <put-attribute name="body" value="/WEB-INF/layouts/subtask/createSubtask.jsp" />
+    <put-attribute name="footer" value="" />
+  
+</definition>
+  
+</tiles-definitions>
